@@ -43,8 +43,8 @@
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="img/photo_2024-11-29_23-33-53.jpg" alt="DYOR guy">
+	<div class="image-container">
+        <img id="randomImage" src="img/photo_2024-11-29_23-33-53.jpg" alt="Placeholder Image">
     </div>
     <div class="icons">
         <a href="https://t.me/DYORguy" target="_blank">
@@ -63,5 +63,26 @@
 	<div style="padding-top:40px;" class="ca-text">
         CA: 6KNqgFpopgxDKt4TtkuqXazM8rgX41qfkks5mCyDpump
     </div>
+	<script>
+        // Array met afbeeldingen
+        const images = [
+            "img/photo_2024-11-29_23-33-28.jpg",
+            "img/photo_2024-11-29_23-33-48.jpg",
+            "img/photo_2024-11-29_23-33-53.jpg",
+            "img/photo_2024-11-29_23-34-15.jpg",
+			"img/photo_2024-11-30_03-58-20.jpg"
+        ];
+
+        // Functie om een willekeurige afbeelding te tonen
+        function setRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImageElement = document.getElementById("randomImage");
+            randomImageElement.src = images[randomIndex];
+        }
+
+        // Wissel de afbeelding elke 3 seconden
+        setRandomImage();
+        setInterval(setRandomImage, 3000);
+    </script>
 </body>
 </html>
