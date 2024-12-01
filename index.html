@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DYOR Guy</title>
+    <title>Responsive Page</title>
     <style>
         body {
             margin: 0;
@@ -16,20 +16,19 @@
             height: 100vh;
             font-family: Arial, sans-serif;
         }
-		.static-image-container {
+        .static-image-container {
             margin-bottom: 20px;
+        }
+        .static-image-container img,
+        .image-container img {
+            max-width: 100%;
+            height: 300px; /* Stel een vaste hoogte in */
+            display: block;
+            object-fit: contain; /* Zorg ervoor dat de afbeelding goed past */
         }
         .image-container {
             margin-bottom: 20px;
         }
-        .static-image-container img,
-        .image-container img img {
-            height: 300px; /* Stel een vaste hoogte in */
-            width: auto; /* Zorg ervoor dat de breedte proportioneel blijft */
-            display: block;
-            object-fit: contain; /* Zorg ervoor dat de afbeelding goed in het kader past */
-        }
-		
         .icons {
             display: flex;
             gap: 15px;
@@ -50,13 +49,17 @@
     </style>
 </head>
 <body>
-	<!-- Statische afbeelding -->
+    <!-- Statische afbeelding -->
     <div class="static-image-container">
-        <img style="height:200px;" height="200px"  src="img/head.png" alt="Static Image">
+        <img  src="img/head.png" alt="Static Image">
     </div>
-	<div class="image-container">
+
+    <!-- Wisselende afbeelding -->
+    <div class="image-container">
         <img  id="randomImage" src="img/photo_2024-11-29_23-33-53.jpg" alt="Placeholder Image">
     </div>
+
+    <!-- Iconen -->
     <div class="icons">
         <a href="https://t.me/DYORguy" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
@@ -65,13 +68,16 @@
             <img src="img/pumpfun-logo.png" alt="Pumpfun">
         </a>
         <a href="https://mevx.io/solana/6KNqgFpopgxDKt4TtkuqXazM8rgX41qfkks5mCyDpump?ref=MajorBuyBot" target="_blank">
-            <img src="https://via.placeholder.com/40?text=MEVX" alt="DEX">
+            <img src="https://via.placeholder.com/40?text=MEVX" alt="MEVX">
         </a>
     </div>
-	<div style="padding-top:40px;" class="ca-text">
+
+    <!-- Contracttekst -->
+    <div class="ca-text">
         CA: 6KNqgFpopgxDKt4TtkuqXazM8rgX41qfkks5mCyDpump
     </div>
-	<script>
+
+    <script>
         // Array met afbeeldingen
         const images = [
             "img/photo_2024-11-29_23-33-28.jpg",
