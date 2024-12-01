@@ -16,15 +16,20 @@
             height: 100vh;
             font-family: Arial, sans-serif;
         }
+		.static-image-container {
+            margin-bottom: 20px;
+        }
         .image-container {
             margin-bottom: 20px;
         }
-        .image-container img {
-            height: 400px; /* Stel een vaste hoogte in */
+        .static-image-container img,
+        .image-container img img {
+            height: 300px; /* Stel een vaste hoogte in */
             width: auto; /* Zorg ervoor dat de breedte proportioneel blijft */
             display: block;
             object-fit: contain; /* Zorg ervoor dat de afbeelding goed in het kader past */
         }
+		
         .icons {
             display: flex;
             gap: 15px;
@@ -45,15 +50,16 @@
     </style>
 </head>
 <body>
+	<!-- Statische afbeelding -->
+    <div class="static-image-container">
+        <img style="height:200px;" height="200px"  src="img/head.png" alt="Static Image">
+    </div>
 	<div class="image-container">
-        <img id="randomImage" src="img/photo_2024-11-29_23-33-53.jpg" alt="Placeholder Image">
+        <img  id="randomImage" src="img/photo_2024-11-29_23-33-53.jpg" alt="Placeholder Image">
     </div>
     <div class="icons">
         <a href="https://t.me/DYORguy" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-        </a>
-        <a href="https://x.com/DYOR_Guy" target="_blank">
-            <img src="img/1725374683twitter-x-logo.png" alt="Twitter (X)">
         </a>
         <a href="https://pump.fun/coin/6KNqgFpopgxDKt4TtkuqXazM8rgX41qfkks5mCyDpump" target="_blank">
             <img src="img/pumpfun-logo.png" alt="Pumpfun">
